@@ -3,4 +3,4 @@
 -- use attributes formed and split for computing the lifespan
 
 SELECT band_name, (YEAR('2022-01-01') - MIN(formed)) AS lifespan FROM metal_bands
-WHERE style = 'Glam rock' GROUP BY band_name ORDER BY lifespan DESC;
+WHERE style like '%Glam rock%'  ORDER BY lifespan DESC;
